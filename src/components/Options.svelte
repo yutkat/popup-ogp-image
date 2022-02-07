@@ -1,20 +1,15 @@
 <script lang="ts">
+    import Button, { Label } from "@smui/button";
     import type { IStorage } from "../types";
+    import Textfield from "@smui/textfield";
+    import HelperText from "@smui/textfield/helper-text";
 
-    export let count: number;
+    export let enable_sites: string;
     let successMessage: string = null;
-
-    function increment() {
-        count += 1;
-    }
-
-    function decrement() {
-        count -= 1;
-    }
 
     function save() {
         const storage: IStorage = {
-            count,
+            enable_sites,
         };
 
         chrome.storage.sync.set(storage, () => {
@@ -27,24 +22,21 @@
     }
 </script>
 
+<div class="options">
+    <div>
+        <Textfield textarea bind:value={enable_sites} label="Label">
+            <HelperText slot="helper">Helper Text</HelperText>
+        </Textfield>
+        <Button color="secondary" on:click={save} variant="raised">
+            <Label>Save</Label>
+        </Button>
+        {#if successMessage}<span class="success">{successMessage}</span>{/if}
+    </div>
+</div>
+
 <style>
-    .container {
+    .options {
         min-width: 250px;
-    }
-
-    button {
-        border-radius: 2px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-        background-color: #2ecc71;
-        color: #ecf0f1;
-        transition: background-color 0.3s;
-        padding: 5px 10px;
-        border: none;
-    }
-
-    button:hover,
-    button:focus {
-        background-color: #27ae60;
     }
 
     .success {
@@ -53,12 +45,3 @@
     }
 </style>
 
-<div class="container">
-    <p>Current count: <b>{count}</b></p>
-    <div>
-        <button on:click={decrement}>-</button>
-        <button on:click={increment}>+</button>
-        <button on:click={save}>Save</button>
-        {#if successMessage}<span class="success">{successMessage}</span>{/if}
-    </div>
-</div>
