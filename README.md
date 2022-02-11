@@ -1,20 +1,13 @@
-# Svelte Typescript Chrome Extension Boilerplate
+# popup-ogp-image
 
-> Boilerplate for Chrome Extension Svelte Typescript project
-
-## Development
-
-```bash
-# build files to './public/build'
-# rollup.watch rebuilds your bundle when it detects changes
-npm run dev
-```
+![awesome-neovim](https://user-images.githubusercontent.com/8683947/153643111-c1419102-7f9c-490d-8808-c804bf815321.png)
 
 ## Build
 
 ```bash
 # build files to './public/build'
-$ npm run build
+npm install
+npm run build
 ```
 
 ## Load unpacked extensions
@@ -26,3 +19,7 @@ $ npm run build
 3. Click the `LOAD UNPACKED` button and select the `/public` directory.
 
 ![Example](https://developer-chrome-com.imgix.net/image/BrQidfK9jaQyIHwdw91aVpkPiib2/iYdLKFsJ1KSVGLhbLRvS.png?auto=format&w=650)
+
+## Special Thanks
+
+- [chrome-extension-svelte-typescript-boilerplate](https://github.com/NekitCorp/chrome-extension-svelte-typescript-boilerplate) : Use as a template

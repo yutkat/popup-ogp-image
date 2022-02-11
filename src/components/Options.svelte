@@ -23,20 +23,24 @@
 </script>
 
 <div class="options">
-    <div>
-        <Textfield textarea bind:value={enable_sites} label="Label">
-            <HelperText slot="helper">Helper Text</HelperText>
-        </Textfield>
-        <Button color="secondary" on:click={save} variant="raised">
-            <Label>Save</Label>
-        </Button>
-        {#if successMessage}<span class="success">{successMessage}</span>{/if}
-    </div>
+    <Textfield
+        textarea
+        bind:value={enable_sites}
+        label="EnableSite"
+        input$rows={4}
+        input$cols={60}
+    >
+        <HelperText slot="helper" />
+    </Textfield>
+    <Button color="secondary" on:click={save} variant="raised">
+        <Label>Save</Label>
+    </Button>
+    {#if successMessage}<span class="success">{successMessage}</span>{/if}
 </div>
 
 <style>
     .options {
-        min-width: 250px;
+        min-width: 400px;
     }
 
     .success {
