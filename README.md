@@ -18,8 +18,6 @@ npm run build
 2. Enable Developer Mode by clicking the toggle switch next to `Developer mode`.
 3. Click the `LOAD UNPACKED` button and select the `/public` directory.
 
-![Example](https://developer-chrome-com.imgix.net/image/BrQidfK9jaQyIHwdw91aVpkPiib2/iYdLKFsJ1KSVGLhbLRvS.png?auto=format&w=650)
-
 ## Special Thanks
 
 - [chrome-extension-svelte-typescript-boilerplate](https://github.com/NekitCorp/chrome-extension-svelte-typescript-boilerplate) : Use as a template
