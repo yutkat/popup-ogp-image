@@ -42,6 +42,6 @@
   },
   "dependencies": {
     "@devmehq/open-graph-extractor": "^1.0.1",
-    "axios": "^0.25.0"
+    "axios": "^0.28.0"
   }
 }
